@@ -48,7 +48,7 @@ You can stop app by enter:
 stop();
 ```
 
-    OR 
+OR 
 
 ```
 Reload current page (Ctrl+R)
@@ -63,7 +63,9 @@ If facebook stop loading content:
 ```
 click filter > activity log > Search History
 ```
-    OR 
+
+OR
+ 
 ```
 refresh page.
 ```
