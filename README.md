@@ -1,6 +1,11 @@
 # Facebook-Housekeeping
 
 <br><br>
+## Demo 
+
+![demo](/img/demo.gif)
+
+<br><br>
 ## Overview
 
 It seems that Facebook doesn’t want you to delete all your past activities on the platform. In fact, it is impossible to delete all your activity with a single click. This “Delete Everything Button” does not exist. So, Facebook wants you to click manually on every single activity of you to review and then delete it. Considering that most of us are active users on Facebook for several years, this process apparently will take days. However, there is a fast-track to delete your Facebook history.
