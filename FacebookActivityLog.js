@@ -1,54 +1,42 @@
-const ACTIVITY_BUTTON = "oajrlxb2 thwo4zme";
-const DELETE_BUTTON = "d2edcug0 hzawbc8m";
-const DELETE_BUTTON_2 = "s1i5eluu ni8dbmo4 stjgntxs k4urcfbm";
+function deleteFacebookActivityLog(index = 0) {
+  var items = document.querySelectorAll('[aria-label="Action options"] > i');
+  var item = items[index]
 
-function findActivityLog() {
-  const activity_btn = document.getElementsByClassName(ACTIVITY_BUTTON);
-  count = 0
-  total = activity_btn.length
-  for (i = 0; i < 4; i++) {
-      activityLog(activity_btn[i]).then(findDeleteButton).then(findDeleteButtonAgain);
-      count++; 
+  if (item) {
+      console.log("ACTIVITY-LOG => ", item.parentNode.parentNode.parentNode.innerText);
+          
+      item.scrollIntoView();
+      item.click();
+      setTimeout(() => {
+      var opts = document.querySelectorAll('[role="menuitem"]');
+      var canDelete = false
+      for (let i=0; i < opts.length; i += 1) {
+          var opt = opts[i];
+          if (opt.innerText === "Move to trash" || opt.innerText === "Delete") {
+          var ariaLabel = opt.innerText === "Move to trash" ? "Move to Trash" : "Delete";
+          canDelete = true;
+          opt.click();
+          setTimeout(() => {
+              var confirm = document.querySelector(`[aria-label="${ariaLabel}"][tabindex="0"]`);
+              if (confirm) {
+              confirm.click();
+              }
+              setTimeout(() => {
+              deleteFacebookActivityLog(index);
+              console.log("Activity deleted");
+              }, 2000);
+          }, 250);
+          break;
+          }
+      }
+      if (!canDelete) {
+          setTimeout(() => {
+          deleteFacebookActivityLog(index + 1);
+          console.log("Nothing to do");
+          }, 250);
+      }
+      }, 250);
   }
-  // findDeleteButton()
-  //   findDeleteButtonAgain()
-  //   count++;
-  tt = "TOTAL=" + total + " DELETED=" + count
-  return tt
 }
 
-function activityLog(ab) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-        ab.click();
-        resolve();
-    }, 2000);
-  });  
-}
-
-function findDeleteButton() {
-  setTimeout(() => {
-    string = "Delete"
-    const delete_btn = document.evaluate('//*[text()="' + string + '"]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE).snapshotItem(0);
-    console.log("findDeleteButton ", delete_btn);
-    // if (delete_btn.textContent == "Delete") {
-    //   console.log(delete_btn);
-    // }    
-    // delete_btn.click();
-  }, 2000);
-  
-}
-
-function findDeleteButtonAgain() {
-  setTimeout(() => {
-    const delete_btn_2 = document.getElementsByClassName(DELETE_BUTTON_2);
-    console.log("findDeleteButtonAgain ", delete_btn_2[0]);
-    // delete_btn_2[0].click();
-  }, 2000);
-}
-
-function deleteFacebookActivityLog() {
-  console.log(findActivityLog());
-}
-
- 
+deleteFacebookActivityLog();
