@@ -48,7 +48,7 @@ You can stop app by enter:
 stop();
 ```
 
-OR 
+    OR 
 
 ```
 Reload current page (Ctrl+R)
@@ -60,13 +60,13 @@ Reload current page (Ctrl+R)
 If there are no more objects to delete, the script ends after the set number of attemps.
 
 If facebook stop loading content:
-    ```
-    - click filter > activity log > Search History
-    ```
-    or
-    ```
-    - refresh page.
-    ```
+```
+click filter > activity log > Search History
+```
+    OR 
+```
+refresh page.
+```
 
 > NOTE: If you refresh page, the script will be removed. You must paste code again.
 
