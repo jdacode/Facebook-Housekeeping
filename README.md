@@ -13,29 +13,34 @@ Scripts:
 
 
 <br><br>
-## Start - For new Facebook layout:
+## Start script - For new Facebook layout:
 
-**1.** Sign in.
-**2.** Go to activity log.
-**3.** Refresh page.
-**4.** Open DevTool.
-   > In chrome press F12.
-**5.** Go to console.
-**6.** Paste all code from **Facebook-Delete-ActivityLog-SearchHistory.js**
-**7.** Clear console
-   > CTRL + L
-**8.** In console:
+1. Sign in.
+2. Go to activity log.
+3. Refresh page.
+4. Open DevTool.
+```
+In chrome press F12.
+```
 
+5. Go to console.
+6. Paste all code from **Facebook-Delete-ActivityLog-SearchHistory.js**
+7. Clear console
+```
+CTRL + L
+```
+
+8. In console:
 ```
 deleteFacebookActivityLog_SearchHistory();
 ```
 
-**9.** Wait for the process to finish.
+9. Wait for the process to finish.
 
 
 
 <br><br>
-## Cancel
+## Stop/Cancel script
 
 You can stop app by enter:
 
