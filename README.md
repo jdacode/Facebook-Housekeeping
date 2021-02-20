@@ -8,7 +8,7 @@
 <br><br>
 ## Overview
 
-It seems that Facebook doesn’t want you to delete all your past activities on the platform. In fact, it is impossible to delete all your activity with a single click. This “Delete Everything Button” does not exist. So, Facebook wants you to click manually on every single activity of you to review and then delete it. Considering that most of us are active users on Facebook for several years, this process apparently will take days. However, there is a fast-track to delete your Facebook history.
+It seems that Facebook doesn’t want users to delete all past activities on the platform. In fact, it is not possible to delete all your activity with a single click. So, the only way is to click manually on every activity of you to review and then delete it. Considering that most of us are active users on Facebook for several years, this process apparently will take days. However, there is a fast-track to delete your Facebook history.
 
 This is going to be a series of scripts to delete your Facebook's Activity log. First, I just want to test each kind of Activity Log, and then compile all in just one script.
 
