@@ -20,7 +20,7 @@ Scripts:
 3. Refresh page.
 4. Open DevTool.
 ```
-In chrome press F12.
+Press F12.
 ```
 
 5. Go to console.
@@ -65,7 +65,7 @@ click filter > activity log > Search History
 ```
 
 OR
- 
+
 ```
 refresh page.
 ```
